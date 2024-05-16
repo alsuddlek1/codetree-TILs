@@ -5,9 +5,10 @@ def GCD(n, m):
     sm_c = min(n,m)
     for i in range(sm_c, 0, -1):
         if n % i == 0 and m % i == 0:
-            if i <= result:
-                result = i
-                break
-    print(result)
+            # if i <= result:
+            #     result = i
+            #     break
+            print(i)
+            break
 
 GCD(N, M)
