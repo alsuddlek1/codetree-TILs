@@ -4,7 +4,7 @@ c = int(c)
 
 def o_judg(o):
     if o == "/":
-        return a / c
+        return int(a / c)
     if o == '*':
         return a * c
     if o == '+':
