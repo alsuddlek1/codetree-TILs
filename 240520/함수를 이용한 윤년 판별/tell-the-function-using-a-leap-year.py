@@ -9,5 +9,7 @@ def year(y):
         return "false"
     if y % 4:
         return "true"
+    else:
+        return "false"
 
 print(year(y))
