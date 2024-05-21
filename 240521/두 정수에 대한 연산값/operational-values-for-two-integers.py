@@ -1,8 +1,10 @@
 c1, c2 = map(int, input().split())
 
 def inte(c1, c2):
-    large = max(c1, c2) + 25
-    small = min(c1, c2) * 2
-    print(small, large)
+    if c1 > c2:
+        c1 = c1 + 25
+    else:
+        c1 =  c1 * 2
+    return c1
 
-inte(c1, c2)
+print(inte(c1, c2), inte(c2, c1))
