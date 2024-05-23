@@ -13,6 +13,7 @@ def in_arr(_list, part):
                 cnt -= 1
         if cnt == 0:
             result = i
+            break
     return result
 
 print(in_arr(_list, part))
