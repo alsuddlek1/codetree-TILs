@@ -28,14 +28,15 @@ else:
     while True:
         if m1 == m2 and d1 == d2:
             break
+
         d1 += 1
         day += 1
 
-        if day == 8:
+        if day == 7:
             day = 1
         
         if d1 == months[m1]:
             m1 += 1
-            d1 = 1
+            d1 = 0
 
 print(days[day])
