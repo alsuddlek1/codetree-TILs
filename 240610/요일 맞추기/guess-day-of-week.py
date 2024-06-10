@@ -20,7 +20,7 @@ if m1 > m2 or (m1 == m2 and d1 > d2):
             day = 7
         
         if d1 == 0:
-            m1 += 1
+            m1 -= 1
             d1 = months[m1]
 
 # 1이 2보다 이전
