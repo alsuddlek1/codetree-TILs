@@ -3,8 +3,15 @@ day, hour, minute = 11, 11, 11
 a, b, c = map(int, input().split())
 
 
-if a <= day or b <= hour or c < minute:
+# if a <= day and b <= hour and c < minute:
+    # print(-1)
+if a < day:
     print(-1)
+elif a == day and b < hour:
+    print(-1)
+elif a == day and b == hour and c < minute:
+    print(-1)
+
 
 else:
     result = 0
