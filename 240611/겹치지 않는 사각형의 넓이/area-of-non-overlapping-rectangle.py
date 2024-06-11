@@ -17,17 +17,26 @@ M_y2 += 1000
 
 data = [[0]*2001 for _ in range(2001)]
 
-for i in range(A_x1, A_x2):
-    for j in range(A_y1, A_y2):
-        data[i][j] = 1
+def fill_area(data, x1, y1, x2, y2, value):
+    for i in range(x1, x2):
+        for j in range(y1, y2):
+            data[i][j] = value
 
-for i in range(B_x1, B_x2):
-    for j in range(B_y1, B_y2):
-        data[i][j] = 1
+fill_area(data, A_x1, A_y1, A_x2, A_y2, 1)
+fill_area(data, B_x1, B_y1, B_x2, B_y2, 1)
+fill_area(data, M_x1, M_y1, M_x2, M_y2, 0)
 
-for i in range(M_x1, M_x2):
-    for j in range(M_y1, M_y2):
-        data[i][j] = 0
+# for i in range(A_x1, A_x2):
+#     for j in range(A_y1, A_y2):
+#         data[i][j] = 1
+
+# for i in range(B_x1, B_x2):
+#     for j in range(B_y1, B_y2):
+#         data[i][j] = 1
+
+# for i in range(M_x1, M_x2):
+#     for j in range(M_y1, M_y2):
+#         data[i][j] = 0
 
 result = 0
 for i in range(2001):
