@@ -1,6 +1,6 @@
 n = int(input())
-data = [0] * 21
-start = 10
+data = [0] * 2001
+start = 1000
 
 for _ in range(n):
     a, b = input().split()
