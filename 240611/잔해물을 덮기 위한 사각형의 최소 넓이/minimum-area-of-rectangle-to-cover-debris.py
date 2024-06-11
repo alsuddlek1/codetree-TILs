@@ -35,6 +35,8 @@ for i in range(2001):
 
 # print(i_list)
 # print(j_list)
+result = 0
+if i_list and j_list:
+    result = (max(j_list) - min(j_list)+1) * (max(i_list) - min(i_list)+1)
 
-result = (max(j_list) - min(j_list)+1) * (max(i_list) - min(i_list)+1)
 print(result)
