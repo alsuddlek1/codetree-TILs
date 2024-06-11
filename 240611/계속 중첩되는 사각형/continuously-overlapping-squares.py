@@ -12,7 +12,7 @@ while cnt != n:
     y2 += 100
     for i in range(x1, x2):
         for j in range(y1, y2):
-            if cnt // 2 != 0: # 홀수일때 blue = 1
+            if cnt % 2 == 0: # 홀수일때 blue = 1
                 data[i][j] = 1
             else: # 짝수일때 red = 3
                 data[i][j] = 3
