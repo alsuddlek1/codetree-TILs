@@ -1,5 +1,5 @@
 n = int(input())
-data = [0] * 2001
+data = [0] * 2101
 start = 1000
 
 for _ in range(n):
