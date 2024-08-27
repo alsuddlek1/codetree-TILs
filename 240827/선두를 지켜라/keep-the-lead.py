@@ -19,17 +19,16 @@ for i in range(M):
         time_B += 1
 
 ## 선두 비교
-result = 0
+cnt = 0
+leader = 0
+for i in range(MAX_T):
+    if arr_A[i] > arr_B[i]:
+        if leader == 1:
+            cnt += 1
+        leader = 2
+    elif arr_A[i] < arr_B[i]:
+        if leader == 2:
+            cnt += 1
+        leader = 1
 
-# 이전 부호
-# True 일때 A가 선두, False 일대 B가 선두
-previous_sign = (arr_A[0] - arr_B[0]) > 0
-for i in range(1, MAX_T+1):
-    # 현재 부호
-    current_sign = (arr_A[i] - arr_B[i]) > 0
-    if current_sign != previous_sign and current_sign != 0:
-            result += 1
-    # 현재부호를 이전 부호로 초기화
-    previous_sign = current_sign
-
-print(result)
+print(cnt)
