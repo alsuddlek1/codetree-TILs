@@ -17,8 +17,10 @@ for i in range(N):
             arr_A[idx_A] = time_A
             time_A = time_A - 1
             idx_A += 1
-    for k in range(idx_A, MAX_T):
-        arr_A[k] = time_A
+    # for k in range(idx_A, MAX_T):
+    #     arr_A[k] = time_A
+    length = len(arr_A[idx_A:])
+    arr_A[idx_A:] = [time_A] * length
 
 # B 로봇
 for i in range(M):
@@ -33,8 +35,10 @@ for i in range(M):
             arr_B[idx_B] = time_B
             time_B = time_B - 1
             idx_B += 1
-    for k in range(idx_B, MAX_T):
-        arr_B[k] = time_B
+    # for k in range(idx_B, MAX_T):
+    #     arr_B[k] = time_B
+    length = len(arr_B[idx_B:])
+    arr_B[idx_B:] = [time_B] * length
 
 # 판별
 cnt = 0
