@@ -22,12 +22,14 @@ for i in range(M):
 result = 0
 
 # 이전 부호
-previous_sign = (arr_A[0] - arr_B[0]) >= 0
-for i in range(MAX_T):
+# True 일때 A가 선두, False 일대 B가 선두
+previous_sign = (arr_A[0] - arr_B[0]) > 0
+for i in range(1, MAX_T+1):
     # 현재 부호
-    current_sign = (arr_A[i] - arr_B[i]) >= 0
+    current_sign = (arr_A[i] - arr_B[i]) > 0
     if current_sign != previous_sign and current_sign != 0:
             result += 1
+    # 현재부호를 이전 부호로 초기화
     previous_sign = current_sign
 
 print(result)
