@@ -1,4 +1,4 @@
-MAX_T = 100000
+MAX_T = 50000
 N, M = map(int, input().split())
 arr_A, arr_B = [0] * MAX_T, [0] * MAX_T
 time_A, time_B = 0, 0
@@ -41,6 +41,5 @@ cnt = 0
 for i in range(1, len(arr_A)):
     if arr_A[i] == arr_B[i] and arr_A[i-1] != arr_B[i-1]:
         cnt += 1
-        # print("Asd",arr_A[i])
 
 print(cnt)
