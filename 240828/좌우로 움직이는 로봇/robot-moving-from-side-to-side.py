@@ -1,4 +1,4 @@
-MAX_T = 100000
+MAX_T = 1000000
 N, M = map(int, input().split())
 arr_A, arr_B = [0] * (MAX_T + 1), [0] * (MAX_T + 1)
 time_A, time_B = 1, 1
