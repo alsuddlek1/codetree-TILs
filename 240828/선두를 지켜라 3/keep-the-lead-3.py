@@ -27,7 +27,7 @@ for i in range(1, MAX_T+1):
     if arr_A[i] > arr_B[i] and arr_A[i] != arr_A[i-1]:
         first = 1
         result += 1
-    elif arr_A[i] > arr_B[i] and arr_A[i] != arr_A[i-1]:
+    elif arr_A[i] < arr_B[i] and arr_A[i] != arr_A[i-1]:
         first = 2
         result += 1
     elif arr_A[i] == arr_B[i] and arr_A[i] != arr_A[i-1]:
