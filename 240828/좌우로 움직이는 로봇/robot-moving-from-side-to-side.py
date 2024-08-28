@@ -30,7 +30,7 @@ elif time_B > time_A:
 # 배열비교
 result = 0
 time_max = max(time_A, time_B)
-for i in range(time_max):
+for i in range(1, time_max):
     if arr_A[i] == arr_B[i] and arr_A[i-1] != arr_B[i-1]:
         result += 1
 
