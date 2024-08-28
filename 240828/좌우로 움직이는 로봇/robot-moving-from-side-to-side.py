@@ -23,7 +23,7 @@ for i in range(M):
 if time_A < time_B:
     for i in range(time_A, time_B):
         arr_A[i] = arr_A[i-1]
-elif time_B > time_A:
+elif time_A > time_B:
     for i in range(time_B, time_A):
         arr_B[i] = arr_B[i-1]
 
