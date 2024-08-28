@@ -20,18 +20,19 @@ for i in range(M):
         time_B += 1
 
 # 비교
-first = 0
+first = [0] * (MAX_T+1)
 result = 0
 
 for i in range(1, MAX_T+1):
-    if arr_A[i] > arr_B[i] and arr_A[i] != arr_A[i-1]:
-        first = 1
-        result += 1
-    elif arr_A[i] < arr_B[i] and arr_A[i] != arr_A[i-1]:
-        first = 2
-        result += 1
-    elif arr_A[i] == arr_B[i] and arr_A[i] != arr_A[i-1]:
-        first = 3
+    if arr_A[i] > arr_B[i]:
+        first[i] = 1
+    elif arr_A[i] < arr_B[i]:
+        first[i] = 2
+    elif arr_A[i] == arr_B[i]:
+        first[i] = 3
+
+for i in range(1, MAX_T+1):
+    if first[i] != first[i-1]:
         result += 1
 
-print(result)
+print(result-1)
