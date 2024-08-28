@@ -28,7 +28,7 @@ for i in range(T):
         if cnt[data[i][2]] >= 1:
             cnt[data[i][2]] -= 1
         # y는 첫 감염
-        else:
+        elif result[data[i][2]] != 1:
             result[data[i][2]] = 1
             cnt[data[i][2]] = K
         cnt[data[i][1]] -= 1
@@ -40,11 +40,10 @@ for i in range(T):
         if cnt[data[i][1]] >= 1:
             cnt[data[i][1]] -= 1
         # x는 첫 감염
-        else:
+        elif result[data[i][1]] != 1:
             result[data[i][1]] = 1
             cnt[data[i][1]] = K
         cnt[data[i][2]] -= 1
-
 
 result = ''.join(map(str, result[1:]))
 print(result)
