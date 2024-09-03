@@ -25,7 +25,7 @@ while cnt < N*M:
         if dir >= 4:
             dir = 0
 
-for i in range(N):
-    for j in range(M):
+for i in range(M):
+    for j in range(N):
         print(snail[i][j], end=" ")
     print()
