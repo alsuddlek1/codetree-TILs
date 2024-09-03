@@ -1,6 +1,6 @@
 N, M = map(int, input().split())
 
-snail = [[0]*N for _ in range(N)]
+snail = [[0]*N for _ in range(M)]
 
 dx = [0, 1, 0, -1] # 우, 하, 좌, 상
 dy = [1, 0, -1, 0]
