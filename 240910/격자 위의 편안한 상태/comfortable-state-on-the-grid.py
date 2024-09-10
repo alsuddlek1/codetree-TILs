@@ -1,5 +1,5 @@
 N, M = map(int, input().split())
-matrix = list([0]*(N+2) for _ in range(N+2))
+matrix = list([0]*(N+1) for _ in range(N+1))
 
 ## 판단 함수
 def judge(x, y):
@@ -10,8 +10,9 @@ def judge(x, y):
     for dir in range(4):
         nx, ny = x+dx[dir], y+dy[dir]
         if 0<=nx<N+1 and 0<=ny<N+1 and matrix[nx][ny] == 1:
+        # if matrix[nx][ny] == 1:
             cnt += 1
-    if cnt >= 3:
+    if cnt == 3:
         return True
     else:
         return False
