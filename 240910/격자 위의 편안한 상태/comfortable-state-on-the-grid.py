@@ -1,10 +1,8 @@
 N, M = map(int, input().split())
-matrix = list([0]*(N+1) for _ in range(N+1))
-res = 0
+matrix = list([0]*(N+2) for _ in range(N+2))
 
 ## 판단 함수
 def judge(x, y):
-    global res
     global matrix
     dx = [0, 0, -1, 1] # 좌우상하
     dy = [-1, 1, 0, 0]
