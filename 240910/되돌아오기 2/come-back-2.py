@@ -22,7 +22,7 @@ for i in data:
             dir_num = 3
     answer += 1
 
-if answer == 0:
-    print(-1)
-else:
+if x==0 and y==0:
     print(answer+1)
+else:
+    print(-1)
