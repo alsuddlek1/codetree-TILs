@@ -1,7 +1,7 @@
 N = int(input())
 arr = list(map(int, input().split()))
 
-min_sum = 10000
+min_sum = 100000000
 min_cnt = 0
 for i in range(N):
     # i = 0,1,2,3,4
