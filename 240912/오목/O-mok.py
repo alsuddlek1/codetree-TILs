@@ -16,13 +16,13 @@ def winner(matrix):
                 cnt = 1
 
     ## 2. 세로 정답
-    for i in range(18):
-        for j in range(19):
-            if matrix[i][j] != 0 and matrix[i][j] == matrix[i+1][j]:
+    for i in range(19):
+        for j in range(18):
+            if matrix[j][i] != 0 and matrix[j][i] == matrix[j+1][i]:
                 cnt += 1
                 if cnt == 5:
-                    print(matrix[i][j])
-                    print(i, j+1)
+                    print(matrix[j][i])
+                    print(j, i+1)
                     return
             else:
                 cnt = 1
