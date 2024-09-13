@@ -8,7 +8,6 @@ for _ in range(n):
 result = 0
 
 if k < 50:
-    print(1234343)
     for i in range(k+1, 100-k):
         cnt = data[i]
         for j in range(1, k+1):
