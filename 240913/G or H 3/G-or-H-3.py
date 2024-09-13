@@ -12,13 +12,17 @@ for _ in range(N):
         data[roc] = 1
     elif soc == "H":
         data[roc] = 2
+# print(data)
 
 ## 계산
 max_sum = 0
-for i in range(1, max_cnt-K+1):
+for i in range(1, 10000-K):
+    # print(i)
     cnt = 0
     for j in range(i, i+K+1):
+        # print(j)
         cnt += data[j]
+        # print(j, cnt)
 
     max_sum = max(max_sum, cnt)
 
