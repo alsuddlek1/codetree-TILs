@@ -6,7 +6,7 @@ for _ in range(N):
     x,y = map(int, input().split())
     data.append((x,y))
 
-result = 100000000 # 사각형 넓이
+result = 10000000000 # 사각형 넓이
 
 # 1. 점 하나씩 제외
 for i in range(N):
