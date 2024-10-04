@@ -4,14 +4,13 @@ N = int(input())
 data = list(map(int, input().split()))
 
 def bubble_sort(N, arr):
-    sorted = True
-
-    while sorted == False:
-        for i in range(N):
+    for k in range(N):
+        for i in range(N-1):
             if arr[i] > arr[i+1]:
                 tmp = arr[i]
-                arr[i] = a[i+1]
+                arr[i] = arr[i+1]
                 arr[i+1] = tmp
     return arr
 
-print(bubble_sort(N, data))
+for i in range(N):
+    print(bubble_sort(N, data)[i], end=" ")
