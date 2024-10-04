@@ -7,10 +7,11 @@ def selection_sort(N, arr):
         for j in range(i+1, N):
             if arr[j] < arr[minimum]:
                 minimum = j
-            tmp = arr[i]
-            arr[i] = arr[minimum]
-            arr[minimum] = tmp
-            print(arr)
+        tmp = arr[i]
+        arr[i] = arr[minimum]
+        arr[minimum] = tmp
     return arr
 
-print(selection_sort(N, data))
+selection_sort(N, data)
+for i in range(N):
+    print(data[i], end=" ")
