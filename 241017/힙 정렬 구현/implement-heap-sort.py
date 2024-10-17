@@ -28,5 +28,5 @@ def heap_sort():
 
 heap_sort()
 
-for i in arr:
+for i in arr[1:]:
     print(i, end=" ")
