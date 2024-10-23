@@ -1,21 +1,20 @@
 data = input()
-stack = []
-result = "()"
-res = ""
 
-for i in data:
-    if i == "(" and len(stack) == 0:
-        stack.append(i)
-    else:
-        if len(stack) > 0:
-            top = stack[-1]
-            if i != top:
-                stack.pop()
+res = "()"
+
+def stack_solution(data):
+    stack = []
+    for i in range(len(data)):
+        if data[i] == "(":
+            stack.append("(")
+        else:
+            if len(stack) == 0:
+                return "No"
             else:
-                stack.append(i)
-   
+                stack.pop()
+    
+    if len(stack) == 0:
+        return "Yes"
+    return "No"
 
-if len(stack) == 0:
-    print("Yes")
-else:
-    print("No")
+print(stack_solution(data))
