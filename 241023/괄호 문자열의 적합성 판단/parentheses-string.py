@@ -1,7 +1,5 @@
 data = input()
 
-res = "()"
-
 def stack_solution(data):
     stack = []
     for i in range(len(data)):
