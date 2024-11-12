@@ -12,23 +12,29 @@ answer = 0
 for i in range(n):
     cnt = 1
     for j in range(n-1):
+        # print(data[i][j])
         if data[i][j] == data[i][j+1]:
             cnt += 1
+            if cnt == m:
+                answer += 1
         else:
             cnt = 1
-    if cnt >= m:
-        answer += 1
 
 
+# print()
 # 2-2. 열 수열
 for i in range(n):
     cnt = 1
     for j in range(n-1):
+        # print(data[j][i])
         if data[j][i] == data[j+1][i]:
             cnt += 1
+            if cnt == m:
+                answer += 1
         else:
             cnt = 1
-    if cnt >= m:
-        answer += 1
+
+if m == 1:
+    answer = n * 2
 
 print(answer)
