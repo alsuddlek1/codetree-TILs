@@ -14,8 +14,8 @@ for i in range(n):
     for j in range(n-1):
         if data[i][j] == data[i][j+1]:
             cnt += 1
-            if cnt == m:
-                answer += 1
+    if cnt >= m:
+        answer += 1
 
 
 # 2-2. 열 수열
@@ -24,6 +24,7 @@ for i in range(n):
     for j in range(n-1):
         if data[j][i] == data[j+1][i]:
             cnt += 1
-            if cnt == m:
-                answer += 1
+    if cnt >= m:
+        answer += 1
+
 print(answer)
