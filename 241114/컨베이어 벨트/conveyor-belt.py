@@ -15,6 +15,8 @@ temp = data[-1]
 for i in range(2*n-2, -1, -1):
     data[i+1] = data[i]
 
+data[0] = temp
+
 # 3. answer
 for i in range(2*n):
     print(data[i], end=" ")
