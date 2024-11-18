@@ -19,21 +19,7 @@ def shift(arr, d):
     return arr
 
 # 4. 전파
-# def spread(s, e, r, d): # s: 시작범위, e: 마지막 범위, r: r 이하 열 일때 -1/ 이상일때 1, d: R/L 방향
-#     if d == "L":
-#             d = "R"
-#     else:
-#         d = "L"
 
-#     if r == -1:
-#         j = j+1
-#     else:
-#         j = j-1
-
-#     for k in range(m):
-#         if data[j+1][k] == data[j][k]:
-#             data[j] = shift(data[j], d)
-#             break
 
 
 # 1. 변수선언
@@ -45,11 +31,12 @@ for i in range(q):
     r, d = input().split()
     r = int(r) - 1
 
+    d_2 = d
+
     data[r] = shift(data[r], d)
 
     # 3-1. 0~r-1
-    for j in range(r-1, -1, -1):
-        d_2 = d
+    for j in range(r-1, -1, -1):        
         if d_2 == "L":
             d_2 = "R"
         else:
@@ -59,10 +46,13 @@ for i in range(q):
             if data[j+1][k] == data[j][k]:
                 data[j] = shift(data[j], d_2)
                 break
+        else:
+            break
+
+    d_2 = d
 
     # 3-1. 0~r-1
     for j in range(r+1, n, 1):
-        d_2 = d
         if d_2 == "L":
             d_2 = "R"
         else:
@@ -72,6 +62,9 @@ for i in range(q):
             if data[j-1][k] == data[j][k]:
                 data[j] = shift(data[j], d_2)
                 break
+        else:
+            break
+
 
 # 5. answer
 for i in range(n):
