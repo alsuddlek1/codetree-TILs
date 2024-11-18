@@ -49,26 +49,28 @@ for i in range(q):
 
     # 3-1. 0~r-1
     for j in range(r-1, -1, -1):
-        if d == "L":
-            d = "R"
+        d_2 = d
+        if d_2 == "L":
+            d_2 = "R"
         else:
-            d = "L"
+            d_2 = "L"
 
         for k in range(m):
             if data[j+1][k] == data[j][k]:
-                data[j] = shift(data[j], d)
+                data[j] = shift(data[j], d_2)
                 break
 
     # 3-1. 0~r-1
     for j in range(r+1, n, 1):
-        if d == "L":
-            d = "R"
+        d_2 = d
+        if d_2 == "L":
+            d_2 = "R"
         else:
-            d = "L"
+            d_2 = "L"
 
         for k in range(m):
             if data[j-1][k] == data[j][k]:
-                data[j] = shift(data[j], d)
+                data[j] = shift(data[j], d_2)
                 break
 
 # 5. answer
