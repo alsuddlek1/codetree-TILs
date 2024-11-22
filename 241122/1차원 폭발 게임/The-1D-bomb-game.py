@@ -19,7 +19,7 @@ def explosion(n, m, arr):
             return_value = True
             for k in range(len(index)):
                 arr[index[k]] = -1
-            break
+            # break
 
     for i in range(len_n):
         if arr[i] != -1:
