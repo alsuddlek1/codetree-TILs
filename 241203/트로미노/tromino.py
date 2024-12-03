@@ -18,7 +18,7 @@ def simulate(x, y):
         cnt = 0
         for dx, dy in pattern:
             nx, ny = x + dx, y + dy
-            if 0 <= nx < n and 0 <= ny < n:
+            if 0 <= nx < n and 0 <= ny < m:
                 cnt += data[nx][ny]
         # print(cnt)
         max_sum = max(max_sum, cnt)
