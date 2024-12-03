@@ -1,24 +1,4 @@
 # 2. 행복한 수열 함수
-## 스택
-def row_simulate(row):
-    stack = []
-    cnt = 0
-    for i in range(n):
-        if len(stack) != 0:
-            if stack[-1] == row[i]:
-                cnt += 1
-                if cnt == m-1:
-                    for j in range(m):
-                        return True
-                else:
-                    stack.append(row[i])
-            else:
-                stack = []
-                stack.append(row[i])
-                cnt = 0
-        else:
-            stack.append(row[i])
-
 def happy(row):
     cnt = 0
     for i in range(1, n):
