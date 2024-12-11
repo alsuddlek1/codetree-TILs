@@ -4,7 +4,7 @@
 # 1. 변수선언
 n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
-ans = 0
+ans = -1
 
 # 0. 범위
 def in_range(x,y):
@@ -19,7 +19,7 @@ def judge_plus(x, y, k, l):
                 if grid[i][j] > 0:
                     cnt += 1
                 else:
-                    cnt = 0
+                    cnt = -1
                     return cnt
     return cnt
 
