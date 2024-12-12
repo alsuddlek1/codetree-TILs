@@ -16,6 +16,6 @@ for time in range(t):
 
 for i in range(n*3):
     print(data[i], end=" ")
-    if i%3 == 2:
+    if i%n == n-1:
         print()
         
