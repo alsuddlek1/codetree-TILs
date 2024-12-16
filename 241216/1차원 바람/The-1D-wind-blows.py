@@ -37,11 +37,13 @@ def wind(w):
 # 1. 변수 선언
 n, m, q = map(int, input().split())
 data = [list(map(int, input().split())) for _ in range(n)]
-r, d = input().split()
-r = int(r) - 1
+
 
 # 4. 전파
 for Q in range(q):
+    r, d = input().split()
+    r = int(r) - 1
+    
     shift(data[r], d)
     d_2 = wind(d)
 
