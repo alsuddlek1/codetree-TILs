@@ -63,9 +63,9 @@ def avg_sum(x, y):
 
 n, m, q = map(int, input().split())
 data = [list(map(int, input().split())) for _ in range(n)]
-new_data = [[0] * m for _ in range(n)]
 
 for Q in range(q):
+    new_data = [[0]*m for _ in range(n)]
     r1, c1, r2, c2 = map(int, input().split())
     r1, c1, r2, c2 = r1-1, c1-1, r2-1, c2-1
     grid = square(r1, c1, r2, c2)
@@ -87,7 +87,7 @@ for Q in range(q):
             if new_data[i][j] == 0:
                 new_data[i][j] = data[i][j]
     data = new_data
-    new_data = [[0]*m for _ in range(n)]
+    
 
 for i in range(n):
     for j in range(m):
