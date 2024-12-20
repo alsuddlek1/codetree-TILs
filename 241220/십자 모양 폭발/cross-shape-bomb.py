@@ -19,14 +19,18 @@ def boom(data, x, y):
     return data
 
 # 4. 중력
-def gravity(data):
-    # 아래에서부터 data[i][j] == 0 이면 data[i][j] = data[i-1][j]
-    for i in range(n-1, 0, -1):
-        for j in range(n):
-            if data[i][j] == 0:
-                data[i][j] = data[i-1][j]
-                data[i-1][j] = 0
-    return data
+def gravity_1(arr):
+    new_arr = []
+    return_arr = [0] * n
+
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            new_arr.append(arr[i])
+
+    for i in range(n-len(new_arr), n):
+        return_arr[i] = new_arr[i-(n-len(new_arr))]
+
+    return return_arr
 
 
 # 1. 변수선언
@@ -34,11 +38,22 @@ n = int(input())
 data = [list(map(int, input().split())) for _ in range(n)]
 s1, s2 = map(int, input().split())
 s1, s2 = s1-1, s2-1
+answer = [[0]*n for _ in range(n)]
 
 data = boom(data, s1, s2)
-data = gravity(data)
+# data = gravity(data)
+
+for i in range(n):
+    arr = []
+    for j in range(n):
+        arr.append(data[j][i])
+
+    new_arr = gravity_1(arr)
+    for k in range(n):
+        answer[k][i] = new_arr[k]
+    
 
 for i in range(n):
     for j in range(n):
-        print(data[i][j], end=" ")
+        print(answer[i][j], end=" ")
     print()
