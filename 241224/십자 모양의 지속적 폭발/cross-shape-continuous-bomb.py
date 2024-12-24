@@ -42,9 +42,10 @@ for c in range(m):
             size = grid[i][c]
             bomb(size, i, c)
             gravity()
+            grid = next_grid
             break
 
 for i in range(n):
     for j in range(n):
-        print(next_grid[i][j], end=" ")
+        print(grid[i][j], end=" ")
     print()
