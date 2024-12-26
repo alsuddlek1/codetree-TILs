@@ -57,8 +57,6 @@ for i in range(k):
     data = rotate()
     gravity()
 
-print(data)
-
 # 6. 출력
 answer = 0
 for i in range(n):
