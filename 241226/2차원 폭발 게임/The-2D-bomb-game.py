@@ -59,9 +59,6 @@ data = [list(map(int, input().split())) for _ in range(n)]
 # 5. k번 반복
 for i in range(k):
     ## bomb과 gravity -> 더이상 터질 게 없을 때 까지 반복
-    # print(bomb(m))
-    # gravity()
-    # print(data)
     while True:
         value = bomb(m)
         gravity()
@@ -72,6 +69,15 @@ for i in range(k):
     # 더이상 터질게없다면 회전
     data = rotate()
     gravity()
+
+    while True:
+        value = bomb(m)
+        gravity()
+        
+        if value == False:
+            break
+
+    
 
 # 6. 출력
 answer = 0
