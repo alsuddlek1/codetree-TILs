@@ -29,20 +29,20 @@ def simulate(dist):
     # 폭탄이 있을 때
     for i in range(n):
         for j in range(n):
-            if grid[i][j] == 1:
+            if grid[i][j]:
                 expand(i, j, dist)
     
     # next_grid에서 폭발 한 후 -> grid에 옮기기
     for i in range(n):
         for j in range(n):
-            if next_grid[i][j] == 1:
+            if next_grid[i][j]:
                 grid[i][j] = 1
 
 grid[r][c] = 1
 dist = 1
 for M in range(m):
     simulate(dist)
-    dist = 2^dist-1
+    dist *= 2
 
 result = 0
 for i in range(n):
