@@ -4,7 +4,7 @@ result = 0
 
 # 2. 순열이 아름다운 수 인지 판단
 def judge_num():
-    
+    # 2가 3번 연속일때 -> 22/23 이런식으로 따로 판단
     idx = 0
     while idx < n:
         ## 연속하는 수 만큼 인덱스 이동 해야 하는데 현재 리스트보다 더 큰 인덱스가 나오면 안됨
@@ -17,7 +17,7 @@ def judge_num():
                 return False
             
         idx += answer[idx]     # idx는 idx번째 수 만큼 점프
-        # idx가 0이고 answer[0]가 2면 2칸씩 연속한지 확인할 것임 
+        # idx가 0이고 answer[0]가 2면 2칸씩 연속한지 확인 
 
     return True
 
