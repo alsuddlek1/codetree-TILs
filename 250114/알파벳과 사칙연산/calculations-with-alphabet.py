@@ -21,7 +21,7 @@ def calculate():
             cnt = cnt - num[i]
         elif formula[i-1] == "*":
             cnt = cnt * num[i]
-    print(num, cnt)
+
     return cnt
     
 
